@@ -1,3 +1,6 @@
+# Example docker direct runs instead of compose:
+#  docker run --entrypoint "gollum" adtac/gollum-alpine --version
+#  docker run -d -P -v `pwd`:/wiki --entrypoint "gollum" adtac/gollum-alpine --allow-uploads --live-preview 
 version: '2'
 services:
   gollum:
@@ -8,3 +11,4 @@ services:
       - '0.0.0.0:4567:4567'
     entrypoint: gollum --live-preview --ref ${WIKI_BRANCH} --port 4567
 #  WIKI_BRANCH=`basename $(git symbolic-ref -q HEAD)` docker-compose up
+
