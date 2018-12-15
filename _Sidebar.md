@@ -1,7 +1,7 @@
 [[Home]]  
 [[Building]]  
 * [[Windows]]
-* [[Linux]]
+* [[Linux]]  
 [[Installing]]  
 * [[Installing#windows-firewall]]
 [[Debugging]]
