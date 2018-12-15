@@ -1,0 +1,10 @@
+version: '2'
+services:
+  gollum:
+    image: suttang/gollum
+    volumes: 
+      - ./.:/root/wikidata
+    ports:
+      - '0.0.0.0:4567:4567'
+    command: gollum --live-preview --ref ${WIKI_BRANCH}
+#  WIKI_BRANCH=$(git symbolic-ref -q HEAD) docker-compose up
